@@ -1,14 +1,12 @@
 package ayush.test;
 import java.util.LinkedList;
 
-import org.w3c.dom.Node;
-
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class App_LinkedList 
 {
     public static void main( String[] args )
     {
