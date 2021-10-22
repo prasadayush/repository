@@ -1,3 +1,5 @@
+package ayush.test;
+
 import java.util.Scanner;
 
 public class OutputFormat {
