@@ -1,12 +1,37 @@
 package ayush.test;
 
-public class StringSplit {
+import java.text.NumberFormat;
+import java.util.*;
 
-	public static void main(String[] args) {
-		String s1 = "Ayush557@gmail.com";
-		String[] s2 = s1.split("@");
-		for (String s : s2) {
-			System.out.println(s);
+class StringSplit {
+
+
+	
+	public static void main(String args[]) {
+		NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
+		String us = formatter.format(12345.567);
+		System.out.println(us);
+		
+		String s = "ayushprasad";
+		for(int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if(s.indexOf(c) == s.lastIndexOf(c)) {
+				System.out.println(c);
+				break;
+			}
 		}
+		Map<Character, Integer> map = new LinkedHashMap<>();
+		for (int i = 0; i < s.length(); i++) {
+			char c = s.charAt(i);
+			if (!map.containsKey(c)) {
+				map.put(c,1);
+			} 
+		}
+		StringBuilder ss = new StringBuilder();
+		
+		for(char ch : map.keySet()) {
+			ss.append(ch);
+		}
+		System.out.println(ss);
 	}
 }
